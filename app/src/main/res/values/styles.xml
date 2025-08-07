@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for Navigation Drawer Menu Text -->
+    <style name="NavigationMenuText">
+        <item name="android:fontFamily">sans-serif</item> <!-- Clean font -->
+        <item name="android:textSize">20sp</item>        <!-- Professional size -->
+        <item name="android:textStyle">normal</item>     <!-- Not bold -->
+        <item name="android:letterSpacing">0.02</item>   <!-- Sharper text -->
+        <item name="android:textColor">#FFFFFF</item>    <!-- White text -->
+    </style>
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
+
+
