@@ -33,5 +33,6 @@
         app:itemVerticalPadding="29dp"
         app:elevation="8dp"
         app:contentInsetStart="0dp"
-        app:contentInsetTop="0dp" /> <!-- Removes extra space -->
+        /> <!-- Removes extra space -->
 
+</androidx.drawerlayout.widget.DrawerLayout>

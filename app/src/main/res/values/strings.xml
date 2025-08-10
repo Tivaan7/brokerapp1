@@ -1,11 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BrokerApp</string>
+
     <string-array name="type_array">
         <item>Type</item>
     </string-array>
+
     <string-array name="status_array">
         <item>Status</item>
     </string-array>
+
     <string-array name="signed_array">
         <item>Signed</item>
     </string-array>

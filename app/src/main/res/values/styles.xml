@@ -8,10 +8,14 @@
         <item name="android:letterSpacing">0.02</item>   <!-- Sharper text -->
         <item name="android:textColor">#FFFFFF</item>    <!-- White text -->
     </style>
+    <style name="HintTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/silver</item>
+    </style>
     <style name="CircleImage">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
 
 </resources>
 
