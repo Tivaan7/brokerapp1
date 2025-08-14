@@ -4,7 +4,33 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
+
+    <!-- Chat bubble outline with tail -->
     <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M4 4h16v12H5.17L4 17.17V4zm0-2a2 2 0 0 0-2 2v20l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4z"/>
+        android:fillColor="#00000000"
+        android:strokeColor="@color/silver"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M3,4 h18 v10 h-9 l-4,4 v-4 H3 z" />
+
+    <!-- Message lines (enquiry content) -->
+    <path
+        android:fillColor="@color/white"
+        android:strokeColor="@color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M6,7 h12" />
+    <path
+        android:fillColor="@color/white"
+        android:strokeColor="@color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M6,10 h9" />
+    <path
+        android:fillColor="@color/white"
+        android:strokeColor="@color/silver"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M6,13 h6" />
 </vector>
