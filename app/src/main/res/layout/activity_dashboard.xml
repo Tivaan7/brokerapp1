@@ -80,12 +80,16 @@
         <!-- Stat Card 1 -->
         <LinearLayout
             android:orientation="horizontal"
+            android:id="@+id/card_offer_to_purchase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_background"
             android:padding="15dp"
             android:layout_marginBottom="20dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -96,7 +100,7 @@
                 android:paddingStart="16dp">
 
                 <TextView
-                    android:text="Total Mandates"
+                    android:text="Offer to Purchase"
                     android:textColor="@color/white"
                     android:textSize="22sp"
                     android:layout_width="wrap_content"
@@ -115,10 +119,12 @@
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/ic_total_mandates"
+                android:src="@drawable/ic_offer_to_purchase"
                 android:layout_gravity="center_vertical"
-                android:contentDescription="Total Mandates Icon" />
+                android:contentDescription="Offer to Purchase Icon" />
         </LinearLayout>
+        <!-- End Stat Card 1 -->
+
 
         <!-- Stat Card 2 -->
         <LinearLayout
@@ -163,9 +169,60 @@
                 android:contentDescription="Signed Mandates Icon" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/card_enquiries"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <!-- Left: labels and count -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:text="Enquiries"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_enquiries_count"
+                    android:text="2"
+                    android:textColor="@color/silver"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <!-- Right: icon -->
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_enquiries"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Enquiries Icon" />
+        </LinearLayout>
+
         <!-- Stat Card 3 -->
         <LinearLayout
+
             android:orientation="horizontal"
+            android:id="@+id/card_total_sales_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_background"

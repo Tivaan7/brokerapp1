@@ -3,428 +3,447 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_background"
+    android:fillViewport="true"
     android:paddingTop="16dp">
 
-    <!-- Top bar with burger for Enquiries screen -->
+    <!-- Single direct child for ScrollView -->
     <LinearLayout
-        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/menu_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Open menu"
-            android:src="@android:drawable/ic_menu_sort_by_size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enquiries"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginStart="12dp" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!-- Heading -->
-        <TextView
-            android:text="Tivaan's Enquiries"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:gravity="center"
+        <!-- Top bar with burger for Enquiries screen -->
+        <LinearLayout
+            android:id="@+id/top_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
 
-        <!-- ===== Card 1 ===== -->
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Open menu"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enquiries"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Content wrapper -->
         <LinearLayout
             android:orientation="vertical"
-            android:background="@drawable/card_background"
-            android:padding="16dp"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginBottom="16dp"
-            android:minHeight="220dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Title row -->
-            <LinearLayout
+            <!-- Heading -->
+            <TextView
+                android:text="Tivaan's Enquiries"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical">
+                android:layout_marginBottom="16dp" />
 
-                <TextView
-                    android:text="John D."
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:includeFontPadding="false"
-                    android:layout_width="0dp"
+            <!-- ===== Card 1 ===== -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:minHeight="220dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Title row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:gravity="center_vertical">
 
+                    <TextView
+                        android:text="John D."
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="NEW"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:background="@color/dark_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/silver"
+                    android:alpha="0.25"/>
+
+                <!-- Info rows (aligned label → value) -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Listing -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:text="Listing"
+                            android:textColor="@color/silver"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="Randburg Townhouse"
+                            android:textColor="@color/white"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <!-- Contact -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:text="Contact"
+                            android:textColor="@color/silver"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="+27 82 555 0101 "
+                            android:textColor="@color/white"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <!-- Meta: 3 neat columns with small labels -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dp">
+
+                        <!-- Source -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:text="Source"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Website"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <!-- Waiting -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <TextView
+                                android:text="Waiting"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="2h 10m"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <!-- Last contact -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:text="Last contact"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="—"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Notes -->
                 <TextView
-                    android:text="NEW"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="6dp"
-                    android:background="@color/dark_background"
-                    android:layout_width="wrap_content"
+                    android:text="Notes: 2–3 bed, R1.1–R1.3m, north-facing."
+                    android:textColor="@color/silver"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/silver"
-                android:alpha="0.25"/>
-
-            <!-- Info rows (aligned label → value) -->
+            <!-- ===== Card 2 ===== -->
             <LinearLayout
                 android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:minHeight="220dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_height="wrap_content">
 
-                <!-- Listing -->
+                <!-- Title row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:paddingVertical="4dp">
+                    android:gravity="center_vertical">
 
                     <TextView
-                        android:text="Listing"
-                        android:textColor="@color/silver"
+                        android:text="Priya M."
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
                         android:includeFontPadding="false"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
-                        android:text="Randburg Townhouse"
+                        android:text="IN PROGRESS"
+                        android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2" />
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:background="@color/dark_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <!-- Contact -->
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/silver"
+                    android:alpha="0.25"/>
+
+                <!-- Info rows -->
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:paddingVertical="4dp">
+                    android:layout_marginTop="10dp">
 
-                    <TextView
-                        android:text="Contact"
-                        android:textColor="@color/silver"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
+                    <!-- Listing -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:weightSum="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
 
-                    <TextView
-                        android:text="+27 82 555 0101 "
-                        android:textColor="@color/white"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
+                        <TextView
+                            android:text="Listing"
+                            android:textColor="@color/silver"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="Sandton Apartment"
+                            android:textColor="@color/white"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <!-- Contact -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2" />
+                        android:weightSum="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:text="Contact"
+                            android:textColor="@color/silver"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="+27 72 111 2222"
+                            android:textColor="@color/white"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <!-- Meta -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:text="Source"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Property24"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <TextView
+                                android:text="Waiting"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="35m"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:text="Last contact"
+                                android:textColor="@color/silver"
+                                android:textSize="12sp"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="10m ago"
+                                android:textColor="@color/white"
+                                android:includeFontPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
-                <!-- Meta: 3 neat columns with small labels -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="6dp">
-
-                    <!-- Source -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <TextView
-                            android:text="Source"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="Website"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <!-- Waiting -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_horizontal">
-                        <TextView
-                            android:text="Waiting"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="2h 10m"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <!-- Last contact -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="end">
-                        <TextView
-                            android:text="Last contact"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="—"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Notes -->
-            <TextView
-                android:text="Notes: 2–3 bed, R1.1–R1.3m, north-facing."
-                android:textColor="@color/silver"
-                android:layout_marginTop="12dp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:includeFontPadding="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <!-- ===== Card 2 ===== -->
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="@drawable/card_background"
-            android:padding="16dp"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginBottom="16dp"
-            android:minHeight="220dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <!-- Title row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical">
-
+                <!-- Notes -->
                 <TextView
-                    android:text="Priya M."
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:text="Notes: Pre-approved R2.6m, wants gym + parking."
+                    android:textColor="@color/silver"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="IN PROGRESS"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="6dp"
-                    android:background="@color/dark_background"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/silver"
-                android:alpha="0.25"/>
-
-            <!-- Info rows -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <!-- Listing -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:paddingVertical="4dp">
-
-                    <TextView
-                        android:text="Listing"
-                        android:textColor="@color/silver"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="Sandton Apartment"
-                        android:textColor="@color/white"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2" />
-                </LinearLayout>
-
-                <!-- Contact -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:paddingVertical="4dp">
-
-                    <TextView
-                        android:text="Contact"
-                        android:textColor="@color/silver"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="+27 72 111 2222"
-                        android:textColor="@color/white"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:includeFontPadding="false"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2" />
-                </LinearLayout>
-
-                <!-- Meta -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="6dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <TextView
-                            android:text="Source"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="Property24"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_horizontal">
-                        <TextView
-                            android:text="Waiting"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="35m"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="end">
-                        <TextView
-                            android:text="Last contact"
-                            android:textColor="@color/silver"
-                            android:textSize="12sp"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="10m ago"
-                            android:textColor="@color/white"
-                            android:includeFontPadding="false"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Notes -->
-            <TextView
-                android:text="Notes: Pre-approved R2.6m, wants gym + parking."
-                android:textColor="@color/silver"
-                android:layout_marginTop="12dp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:includeFontPadding="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>
