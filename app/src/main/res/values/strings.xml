@@ -13,4 +13,6 @@
     <string-array name="signed_array">
         <item>Signed</item>
     </string-array>
+    <string name="open_menu">Open menu</string>
+
 </resources>
