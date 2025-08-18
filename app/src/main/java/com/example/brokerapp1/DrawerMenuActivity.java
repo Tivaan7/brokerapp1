@@ -56,7 +56,7 @@ public class DrawerMenuActivity extends AppCompatActivity implements NavigationV
         } else if (id == R.id.nav_mandates) {
             // TODO: startActivity(new Intent(this, MandatesActivity.class));
         } else if (id == R.id.nav_listings) {
-            // TODO: startActivity(new Intent(this, ListingsActivity.class));
+            startActivity(new Intent(this, ListingsActivity.class));
         }
         closeDrawer();
         return true;

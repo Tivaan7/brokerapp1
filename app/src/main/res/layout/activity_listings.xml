@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Top bar with burger -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Open menu"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:text="Tivaan's Listings"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ===== 3 most relevant filters ===== -->
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/fake_filter_background"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:text="Status"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down"
+                android:contentDescription="Dropdown Arrow" />
+        </LinearLayout>
+
+        <!-- Price -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/fake_filter_background"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down"
+                android:contentDescription="Dropdown Arrow" />
+        </LinearLayout>
+
+        <!-- Location -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/fake_filter_background"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="Location"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down"
+                android:contentDescription="Dropdown Arrow" />
+        </LinearLayout>
+
+        <!-- ===== Listing Cards (tap anywhere) ===== -->
+
+        <!-- Listing 1 -->
+        <LinearLayout
+            android:id="@+id/card_listing_1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/img_cover_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/remax"
+                    android:contentDescription="Listing Image" />
+
+                <TextView
+                    android:id="@+id/badge_status_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center"
+                    android:text="For Sale"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/badge_background" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_address_1"
+                android:text="123 Main St, Sandton"
+                android:textColor="@color/silver"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/txt_price_1"
+                android:text="R 2 950 000"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_beds_1"
+                    android:text="3 Beds"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_baths_1"
+                    android:text="2 Baths"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_area_1"
+                    android:text="180 m²"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Listing 2 -->
+        <LinearLayout
+            android:id="@+id/card_listing_2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/img_cover_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/remax1"
+                    android:contentDescription="Listing Image" />
+
+                <TextView
+                    android:id="@+id/badge_status_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center"
+                    android:text="In Progress"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/badge_background" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_address_2"
+                android:text="45 Park Lane, Sandton"
+                android:textColor="@color/silver"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/txt_price_2"
+                android:text="R 3 450 000"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_beds_2"
+                    android:text="4 Beds"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_baths_2"
+                    android:text="3 Baths"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_area_2"
+                    android:text="220 m²"
+                    android:textColor="@color/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

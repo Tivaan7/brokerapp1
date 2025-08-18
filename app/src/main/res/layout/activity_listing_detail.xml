@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Top bar with burger to keep drawer everywhere -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Open menu"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Hero image with status badge -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/img_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Listing Image" />
+
+            <TextView
+                android:id="@+id/badge_status"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:gravity="center"
+                android:text="Status"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@drawable/badge_background" />
+        </FrameLayout>
+
+        <!-- Address + price -->
+        <TextView
+            android:id="@+id/txt_address"
+            android:text="Address"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:text="R 0"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Specs row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txt_beds"
+                android:text="Beds"
+                android:textColor="@color/silver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/txt_baths"
+                android:text="Baths"
+                android:textColor="@color/silver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/txt_area"
+                android:text="Area"
+                android:textColor="@color/silver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Description in a bordered box -->
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/description_box"
+            android:textColor="@color/silver"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:text="Description goes here." />
+    </LinearLayout>
+</ScrollView>
