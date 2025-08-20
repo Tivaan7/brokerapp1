@@ -47,20 +47,22 @@ public class DrawerMenuActivity extends AppCompatActivity implements NavigationV
     protected void closeDrawer() { if (drawer != null) drawer.closeDrawer(GravityCompat.START); }
 
     @Override
+
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.nav_dashboard && !(this instanceof DashboardActivity)) {
             startActivity(new Intent(this, DashboardActivity.class));
         } else if (id == R.id.nav_enquiries && !(this instanceof EnquiriesActivity)) {
             startActivity(new Intent(this, EnquiriesActivity.class));
-        } else if (id == R.id.nav_mandates) {
-            // TODO: startActivity(new Intent(this, MandatesActivity.class));
-        } else if (id == R.id.nav_listings) {
+        } else if (id == R.id.nav_mandates && !(this instanceof MandatesActivity)) {
+            startActivity(new Intent(this, MandatesActivity.class));
+        } else if (id == R.id.nav_listings && !(this instanceof ListingsActivity)) {
             startActivity(new Intent(this, ListingsActivity.class));
         }
         closeDrawer();
         return true;
     }
+
 
     @Override
     public void onBackPressed() {

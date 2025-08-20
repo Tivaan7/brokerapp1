@@ -13,7 +13,31 @@
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal">
 
-        <!-- Title !-->
+        <!-- Top bar with burger -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Open menu"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Title -->
         <TextView
             android:text="Tivaan's Mandates"
             android:textColor="@color/white"
@@ -21,9 +45,9 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="24dp" />
 
-        <!-- Filter: Property Type -->
+        <!-- ===== Filters (unchanged) ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -49,7 +73,7 @@
                 android:src="@drawable/ic_arrow_down"
                 android:contentDescription="Dropdown Arrow"/>
         </LinearLayout>
-        <!-- Filter: Property Type -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -75,7 +99,7 @@
                 android:src="@drawable/ic_arrow_down"
                 android:contentDescription="Dropdown Arrow"/>
         </LinearLayout>
-        <!-- Filter: Property Type -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -102,7 +126,6 @@
                 android:contentDescription="Dropdown Arrow"/>
         </LinearLayout>
 
-        <!-- Filter: Signed -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -129,7 +152,7 @@
                 android:contentDescription="Dropdown Arrow"/>
         </LinearLayout>
 
-        <!-- Mandate Card 1 -->
+        <!-- ===================== Mandate Card 1 ===================== -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -138,7 +161,6 @@
             android:padding="16dp"
             android:layout_marginBottom="20dp">
 
-            <!-- Property Image -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
@@ -147,7 +169,6 @@
                 android:contentDescription="Property Image"
                 android:layout_marginBottom="12dp" />
 
-            <!-- Property Title -->
             <TextView
                 android:text="123 Main St, Sandton"
                 android:textColor="@color/silver"
@@ -157,58 +178,52 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp" />
 
-            <!-- Property Details -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!-- Type -->
+                <!-- TYPE (TextView styled exactly like Price) -->
                 <TextView
+                    android:id="@+id/tv_type_1"
                     android:text="Type: For Sale"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_marginBottom="6dp"
+                    android:clickable="true"
+                    android:focusable="true" />
 
-                <!-- Status -->
-                <TextView
-                    android:text="Status: For Sale"
-                    android:background="@drawable/card_background"
-                    android:padding="8dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
-
-                <!-- Price -->
+                <!-- PRICE (unchanged) -->
                 <TextView
                     android:text="Price: R2,500,000"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp" />
 
-                <!-- Signed -->
+                <!-- SIGNED (TextView styled exactly like Price) -->
                 <TextView
+                    android:id="@+id/tv_signed_1"
                     android:text="Signed: Yes"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Mandate Card 2 -->
+        <!-- ===================== Mandate Card 2 ===================== -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -240,47 +255,43 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_type_2"
                     android:text="Type: For Sale"
-                    android:textSize="15dp"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
-
-                <TextView
-                    android:text="Status: For Sale"
-                    android:background="@drawable/card_background"
-                    android:padding="8dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_marginBottom="6dp"
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:text="Price: R3,100,000"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp" />
 
                 <TextView
+                    android:id="@+id/tv_signed_2"
                     android:text="Signed: No"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Mandate Card 3 -->
+        <!-- ===================== Mandate Card 3 ===================== -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -311,43 +322,39 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_type_3"
                     android:text="Type: For Sale"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
-
-                <TextView
-                    android:text="Status: For Sale"
-                    android:background="@drawable/card_background"
-                    android:padding="8dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_marginBottom="6dp"
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:text="Price: R4,200,000"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp" />
 
                 <TextView
+                    android:id="@+id/tv_signed_3"
                     android:text="Signed: Yes"
                     android:background="@drawable/card_background"
                     android:padding="8dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
             </LinearLayout>
         </LinearLayout>
 

@@ -28,6 +28,7 @@
         <activity android:name=".EnquiriesActivity" />
         <activity android:name=".DrawerMenuActivity" />
         <activity android:name=".ListingsActivity" />
+        <activity android:name=".MandatesActivity" />
         <activity
             android:name=".ListingDetailActivity"
             android:exported="false"
