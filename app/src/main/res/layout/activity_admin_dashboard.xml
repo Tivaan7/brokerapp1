@@ -1,0 +1,48 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFinancial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Financial Breakdown Sale" />
+
+        <Button
+            android:id="@+id/btnMandates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mandates (Offer to Purchase)" />
+
+        <Button
+            android:id="@+id/btnListings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All Listings" />
+
+        <Button
+            android:id="@+id/btnAgents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add/Remove Agent Profile" />
+
+        <Button
+            android:id="@+id/btnResetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Agent Password" />
+
+        <Button
+            android:id="@+id/btnEnquiries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enquiries" />
+
+    </LinearLayout>
+</ScrollView>
